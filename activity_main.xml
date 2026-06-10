@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    activity_main.xml  –  Main Screen layout
+    Dark nature-themed background. Displays gear counts (calculated
+    via loop) and three action buttons.
+-->
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_forest_gradient"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="24dp">
+
+        <!-- Header emoji + title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🏕️"
+            android:textSize="64sp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Campsite Commander"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="#F0FFF0"
+            android:gravity="center"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gear Management HQ"
+            android:textSize="14sp"
+            android:textColor="#A8D5A2"
+            android:gravity="center"
+            android:layout_marginBottom="28dp"/>
+
+        <!-- Stats card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/card_dark_green"
+            android:padding="20dp"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="INVENTORY SUMMARY"
+                android:textSize="11sp"
+                android:textColor="#6B9E65"
+                android:textStyle="bold"
+                android:letterSpacing="0.12"
+                android:layout_marginBottom="12dp"/>
+
+            <!-- Gear entries count -->
+            <TextView
+                android:id="@+id/tvGearCount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Gear Entries: 0"
+                android:textSize="18sp"
+                android:textColor="#F0FFF0"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"/>
+
+            <!-- Total units packed – calculated via loop -->
+            <TextView
+                android:id="@+id/tvTotalItems"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Total Units Packed: 0"
+                android:textSize="18sp"
+                android:textColor="#A8D5A2"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+        <!-- ADD GEAR button -->
+        <Button
+            android:id="@+id/btnAddGear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="➕  Add Gear"
+            android:textSize="17sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#2E7D32"
+            android:layout_marginBottom="12dp"
+            android:padding="16dp"/>
+
+        <!-- VIEW GEAR LIST button -->
+        <Button
+            android:id="@+id/btnViewGear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📋  View Full Gear List"
+            android:textSize="17sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#388E3C"
+            android:layout_marginBottom="12dp"
+            android:padding="16dp"/>
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#2E4A2E"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- CLEAR ALL button -->
+        <Button
+            android:id="@+id/btnClearAll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🗑️  Clear All Gear"
+            android:textSize="15sp"
+            android:textColor="#FFCDD2"
+            android:backgroundTint="#4E342E"
+            android:padding="14dp"/>
+
+        <!-- Footer -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="IMAD5112 Practicum Assessment"
+            android:textSize="11sp"
+            android:textColor="#4A7A44"
+            android:gravity="center"
+            android:layout_marginTop="28dp"/>
+
+    </LinearLayout>
+</ScrollView>

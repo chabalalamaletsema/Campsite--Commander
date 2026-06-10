@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    activity_detailed_view.xml  –  Detailed View Screen
+    Scrollable list of all gear with a stats banner at the top
+    and a "Back to Base" navigation button at the bottom.
+-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_forest_gradient">
+
+    <!-- Fixed header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#1B3A1B"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🎒  Full Gear List"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#F0FFF0"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Stats banner (populated in DetailedViewActivity.kt) -->
+        <TextView
+            android:id="@+id/tvStats"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Loading…"
+            android:textSize="14sp"
+            android:textColor="#A8D5A2"
+            android:background="@drawable/card_dark_green"
+            android:padding="12dp"/>
+
+    </LinearLayout>
+
+    <!-- Scrollable gear summary -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvGearSummary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="14sp"
+            android:textColor="#D4EDDA"
+            android:fontFamily="monospace"
+            android:lineSpacingExtra="4dp"/>
+
+    </ScrollView>
+
+    <!-- Fixed "Back to Base" button at the bottom -->
+    <Button
+        android:id="@+id/btnBackToBase"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="⬅️  Back to Base"
+        android:textSize="17sp"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#2E7D32"
+        android:padding="18dp"
+        android:margin="16dp"/>
+
+</LinearLayout>

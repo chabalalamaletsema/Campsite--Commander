@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    ============================================================
+    FILE: AndroidManifest.xml
+    PURPOSE: App manifest – declares all 3 activities and sets
+             SplashActivity as the LAUNCHER entry point.
+
+    KEY ENTRIES:
+      - SplashActivity  : LAUNCHER (first screen, auto-transitions)
+      - MainActivity    : Main screen with Add Gear + totals
+      - DetailedViewActivity : Full gear list + Back to Base
+
+    NOTES:
+      - android:exported="true" required on LAUNCHER for API 31+
+      - Other activities use exported="false" (internal only)
+    ============================================================
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.campsitecommander">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_campsite"
+        android:roundIcon="@drawable/ic_campsite"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.CampsiteCommander">
+
+        <!-- SCREEN 1: Splash (launcher entry point) -->
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <!-- SCREEN 2: Main screen -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"/>
+
+        <!-- SCREEN 3: Detailed view -->
+        <activity
+            android:name=".DetailedViewActivity"
+            android:exported="false"
+            android:label="Gear List"/>
+
+    </application>
+
+</manifest>

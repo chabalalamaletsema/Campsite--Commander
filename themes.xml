@@ -1,0 +1,16 @@
+<resources>
+    <!--
+        Dark nature / campsite theme.
+        NoActionBar because each screen manages its own header.
+    -->
+    <style name="Theme.CampsiteCommander" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">#2E7D32</item>
+        <item name="colorPrimaryVariant">#1B5E20</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorSecondary">#66BB6A</item>
+        <item name="colorOnSecondary">#000000</item>
+        <item name="android:windowBackground">@drawable/bg_forest_gradient</item>
+        <item name="android:statusBarColor">#0A1F0A</item>
+        <item name="android:navigationBarColor">#0A1F0A</item>
+    </style>
+</resources>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    App launcher icon – campfire over dark green circle
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Dark green background circle -->
+    <path android:fillColor="#1B3A1B"
+        android:pathData="M54,0 A54,54 0 1,1 53.9,0 Z"/>
+
+    <!-- Campfire base logs -->
+    <path android:fillColor="#5D4037"
+        android:pathData="M30,72 L54,72 L78,72 L72,78 L36,78 Z"/>
+
+    <!-- Left log -->
+    <path android:fillColor="#795548"
+        android:pathData="M32,72 L44,58 L48,60 L36,74 Z"/>
+
+    <!-- Right log -->
+    <path android:fillColor="#795548"
+        android:pathData="M76,72 L64,58 L60,60 L72,74 Z"/>
+
+    <!-- Outer flame (orange) -->
+    <path android:fillColor="#FF6F00"
+        android:pathData="M54,28 C46,38 38,46 42,58 C46,68 62,68 66,58 C70,46 62,38 54,28 Z"/>
+
+    <!-- Inner flame (yellow) -->
+    <path android:fillColor="#FFD600"
+        android:pathData="M54,38 C50,44 46,50 49,57 C51,63 57,63 59,57 C62,50 58,44 54,38 Z"/>
+
+    <!-- Flame tip (white-hot) -->
+    <path android:fillColor="#FFFFFF"
+        android:pathData="M54,44 C52,48 51,52 53,55 C54,57 55,57 56,55 C58,52 56,48 54,44 Z"/>
+
+</vector>
